@@ -21,5 +21,9 @@ public class CalApi {
         return calService.update(id,name);
     }
 
+    @DeleteMapping("deleteCus")
+    public Customer deleteCus(@RequestParam Integer id){
+        return calService.delete(id);
+    }
 
 }

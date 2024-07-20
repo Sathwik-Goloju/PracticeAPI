@@ -6,6 +6,8 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.awt.*;
+
 @Service
 public class CalService {
     @Autowired
@@ -23,4 +25,11 @@ public class CalService {
         rEposi.save(cust);
         return cust;
     }
+
+    public Customer delete(Integer id){
+        Customer cust = rEposi.findById(id).get();
+         rEposi.deleteById(id);
+         return cust;
+    }
+
 }
