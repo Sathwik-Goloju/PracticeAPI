@@ -26,4 +26,8 @@ public class CalApi {
         return calService.delete(id);
     }
 
+    @GetMapping("GetCusData")
+    public  Customer getCust(@RequestParam Integer id){
+        return calService.getCustData(id);
+    }
 }

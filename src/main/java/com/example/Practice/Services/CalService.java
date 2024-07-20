@@ -21,8 +21,12 @@ public class CalService {
     public Customer update(Integer id,String name){
         Customer cust = rEposi.findById(id).get();
         cust.setCusName(name);
-
         rEposi.save(cust);
+        return cust;
+    }
+
+    public Customer getCustData(Integer id){
+        Customer cust = rEposi.findById(id).get();
         return cust;
     }
 
